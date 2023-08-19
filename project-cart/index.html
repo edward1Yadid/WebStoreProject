@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/project-cart/style.css">
+
+    <title>Shopping-Cart</title>
+</head>
+
+<body>
+
+
+
+    <div id="Shopping-Cart">
+
+        <h1 id="titel-Shopping-Cart">Shopping Cart</h1>
+        <hr id="hr">
+        <button id="btnShoppingCart" onclick="emptyCart()">Empty cart</button>
+
+        <table id="tblcartHead">
+            <thead>
+                <tr>
+                    <th class="aling-left">Name</th>
+                    <th class="aling-right">Unit Price</th>
+                    <th class="aling-right">Quantiry</th>
+                    <th class="aling-right">Sub Total</th>
+
+                </tr>
+
+            </thead>
+            <tbody id="cartTableBody">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="TotalPrice">Toal:</td>
+                    <td id="itemCount" colspan="2"> </td>
+                    <td id="totalAmount"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h1 id="titel-Shopping-Cart" class="products">Products</h1>
+        <hr>
+        <div id="product-item-container"></div>
+
+    </div>
+    <script src="permissions.js"></script>
+    <script src="/project-cart/script.js"></script>
+
+</body>

@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+}
+
+#Shopping-Cart {
+    padding: 30px;
+
+
+}
+
+#titel-Shopping-Car {
+    margin-bottom: 20px;
+}
+
+#hr {
+    color: gray;
+
+}
+
+#btnShoppingCart {
+    float: right;
+
+    border: 1px solid red;
+    padding: 5px 5px;
+    color: red;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 3px;
+}
+
+#tblcartHead {
+    width: 100%;
+
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid #eae8e8;
+
+
+}
+
+#tblcartHead th:nth-child(1) {
+    width: 75%;
+}
+
+#tblcartHead th:nth-child(2) {
+    width: 10%;
+}
+
+#tblcartHead th:nth-child(3) {
+    width: 5%;
+}
+
+#tblcartHead th:nth-child(4) {
+    width: 10%;
+}
+
+#tblcartHead th {
+    background-color: #eae8e8;
+    padding: 6px;
+
+    font-weight: 100;
+}
+
+.aling-left {
+    text-align: left;
+
+}
+
+
+.aling-right {
+    text-align: right;
+}
+
+tfoot {
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+#tblcartHead td {
+
+    padding: 5px;
+}
+
+#tblcartHead td:nth-child(1) {
+
+    text-align: right;
+}
+
+.products {
+
+    margin-top: 50px;
+}
+
+#product-item-container {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+    flex-direction: row;
+
+}
+
+.Product-item {
+    border: 1px solid;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: .625rem;
+    width: 350px;
+}
+
+.product-quantity {
+    width: 60px;
+}
+
+.Product-price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.add-to-cart {
+    background-color: rgb(66, 66, 240);
+    border: unset;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.remove-from-cart {
+    background-color: rgb(211, 49, 49);
+    border: unset;
+    color: white;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.cart-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3125rem;
+}
+
+
+#toolbar {
+    width: 100vw;
+    height: 20px;
+    background-color: aqua;
+    margin: 0;
+
+}
