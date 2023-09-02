@@ -1,3 +1,4 @@
+//////////////////////////////////////////////////////////////////////usersData////////////////////////////////////////
 function user(
   username,
   email,
@@ -14,12 +15,14 @@ function user(
   this.permissioinSet = permissioinSet;
 }
 
-const users = saveSessionStorage();
-
-function saveSessionStorage() {
+function userAtsessionstorage() {
   const userkey = "users";
   if (!!sessionStorage.getItem(userkey)) {
-    const users = JSON.parse(sessionStorage.getItem(userkey));
+    let users = JSON.parse(sessionStorage.getItem(userkey));
+    users.forEach(
+      (user) => (user[1].permissioinSet = new Set(user[1].permissioinSet))
+    );
+    console.log(users);
     return new Map(users);
   } else {
     const user1 = new user(
@@ -51,7 +54,7 @@ function saveSessionStorage() {
       "user 4",
       "A123456",
       null,
-      ["EMPTY_CART", "DISCOUNT_15", "ADD_TO_CART"]
+      ["EMPTY_CART", "DISCOUNT_15", "ADD_TO_CART", "REMOVE_FROM_CART"]
     );
     const user5 = new user(
       "user5",
@@ -71,19 +74,21 @@ function saveSessionStorage() {
     ];
 
     sessionStorage.setItem(userkey, JSON.stringify(users));
+    users.forEach(
+      (user) => (user[1].permissioinSet = new Set(user[1].permissioinSet))
+    );
     return new Map(users);
   }
 }
 
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+const users = userAtsessionstorage();
+
+//////////////////////////////////////////////////////////////////////validation////////////////////////////////////////
 
 const formLogin = document.querySelector(".form-login");
 
 // check validation for form
-
 formLogin.addEventListener("submit", validaiton);
-
 function validaiton(element) {
   element.preventDefault();
 
@@ -95,8 +100,8 @@ function validaiton(element) {
   } else if (!isUserExist(email, password)) {
     alert("user was not found for the given credentials");
   } else {
-    sessionStorage.setItem("loggedInUsersEmail", email);
     updateUaerLastLoggedInDate(email);
+    sessionStorage.setItem("currentUserLoggedIN", email);
 
     window.location.href = "index.html";
   }
@@ -119,11 +124,7 @@ function isUserExist(email, password) {
 }
 
 function updateUaerLastLoggedInDate(email) {
-  console.log(users.has(email));
-  console.log(users.get(email));
-
   const now = new Date();
-
   const year = now.getFullYear();
   const month =
     now.getMonth() < 10
@@ -136,7 +137,6 @@ function updateUaerLastLoggedInDate(email) {
   const hour = now.getHours() < 10 ? "0" + now.getHours() : "" + now.getHours();
   const minuts =
     now.getMinutes() < 10 ? "0" + now.getMinutes() : "" + now.getMinutes();
-  console.log(day);
 
   let DateTime = `${day}-${month}-${year} ${hour}:${minuts}`;
   users.get(email).lastLoginDate = DateTime;

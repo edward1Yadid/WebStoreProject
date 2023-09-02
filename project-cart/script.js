@@ -1,14 +1,3 @@
-//userLoggenin check
-// function isUserLoggedIn() {
-//   return !!sessionStorage.getItem("loggedInUsersEmail"); // sessionStorage.getItem("loggedInUsersEmail") !== null
-// }
-
-// if (!isUserLoggedIn()) {
-//   window.location.href = "login.html";
-// }
-
-//toolbar
-
 const products = [
   new Product(1, "FinePix Pro2 3D Camera", "1800.00", "camera.jpg"),
   new Product(2, "EXP Portable HD", "800.00", "external-hard-drive.jpg"),

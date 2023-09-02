@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/project-cart/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./users.js" defer></script>
 
     <title>Shopping-Cart</title>
 </head>
 
-<body>
+<body onload="initsession()">
+    <header id="header">
+        <p id="userName"></p>
+        <button id="logout" onclick="logout()">logout</button>
+    </header>
 
 
 
@@ -47,7 +52,9 @@
         <div id="product-item-container"></div>
 
     </div>
-    <script src="permissions.js"></script>
-    <script src="/project-cart/script.js"></script>
+
+
+    <script src="./script.js"></script>
+    <script src="./permissions.js"></script>
 
 </body>

@@ -153,10 +153,30 @@ tfoot {
 }
 
 
-#toolbar {
-    width: 100vw;
-    height: 20px;
-    background-color: aqua;
-    margin: 0;
 
+#header {
+    background-color: rgb(94, 85, 216);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    align-items: center;
+}
+
+#userName {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#logout {
+    border: 1px solid red;
+    padding: 5px 15px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 3px;
 }
