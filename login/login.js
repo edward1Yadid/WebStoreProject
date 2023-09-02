@@ -102,8 +102,7 @@ function validaiton(element) {
   } else {
     updateUaerLastLoggedInDate(email);
     sessionStorage.setItem("currentUserLoggedIN", email);
-
-    window.location.href = "index.html";
+    window.open("../index.html");
   }
 }
 

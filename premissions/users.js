@@ -4,7 +4,7 @@ function isUserLoggedIn() {
 }
 
 if (!isUserLoggedIn()) {
-  window.location.href = "login.html";
+  window.location.href = "../login/login.html";
 }
 const welcomeText = document.getElementById("userName");
 const userNameEmail = sessionStorage.getItem("currentUserLoggedIN");
