@@ -19,7 +19,7 @@ function logout() {
   let counter = 5;
   const id = setInterval(() => {
     counter--;
-    welcomeText.innerHTML = `good bye ${currentuser[1].fullname} you log out from the website on ${counter}`;
+    welcomeText.innerHTML = `good bye ${currentuser[1].fullname} you will log out from the website on ${counter}`;
     if (counter == 0) {
       clearInterval(id);
     }
