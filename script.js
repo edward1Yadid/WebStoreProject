@@ -4,7 +4,7 @@ function isUserLoggedIn() {
 }
 
 if (!isUserLoggedIn()) {
-  window.location.href = "../login/login.html";
+  window.open("./login/login.html");
 }
 
 const products = [
