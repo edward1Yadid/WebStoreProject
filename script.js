@@ -35,7 +35,7 @@ function showProductGallery() {
 
             <div  class="Product-item" >
             <input class="product-id" type="hidden" value="${product.id}">
-                <img src="/images/${product.photo}" alt="${product.name}">
+                <img src="./images/${product.photo}" alt="${product.name}">
                 <p class="Product-name">${product.name}</p>
                 <p class="Product-price">$${product.price}</p>
                 <div class="">
