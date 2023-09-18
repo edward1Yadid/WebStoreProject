@@ -1,11 +1,3 @@
-//userLoggenin check
-function isUserLoggedIn() {
-  return !!sessionStorage.getItem("currentUserLoggedIN"); // sessionStorage.getItem("loggedInUsersEmail") !== null
-}
-
-if (!isUserLoggedIn()) {
-  window.location.href = "../login/login.html";
-}
 const welcomeText = document.getElementById("userName");
 const userNameEmail = sessionStorage.getItem("currentUserLoggedIN");
 const users = JSON.parse(sessionStorage.getItem("users"));
