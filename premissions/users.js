@@ -18,6 +18,6 @@ function logout() {
   }, 1000);
 
   setTimeout(() => {
-    window.location.href = "login.html";
+    window.location.href = "./login/login.html";
   }, 5000);
 }
